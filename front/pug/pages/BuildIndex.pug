@@ -1,31 +1,159 @@
-.land
-    .land__logo
-        img(src="./img/logo.png" alt="favbet")
-    //.land__left
-    //    .land__title До нових висот з бонусом*
-    //    .land__prize 15 000₴
-    //    .land__spins + 300 фрiспiнiв
-    //    .land__btn хапай штурвал
-    //.land__right
-    //    .land__right-pers
-    //        img(src="./img/pers.png" alt="favbet")
-    //    .land__right-plane
-    //        img(src="./img/plane.png" alt="favbet")
-.footer
-    .footer__text  ТОВ «БУКМЕКЕРСЬКА КОМПАНІЯ «ФАВБЕТ». Ліцензія на провадження діяльності з організації та проведення букмекерської діяльності від 28.12.2022, видана згідно з рішенням КРАІЛ № 433 від 13.12.2022 та Ліцензія на провадження діяльності з організації та проведення азартних ігор казино в мережі Інтернет від 20.04.2021, видана згідно з рішенням КРАІЛ № 137 від 05.04.2021, зі змінами.
-    .footer__wrap
-        ul.footer__licensed
-            li.footer__licensed-item
-                img(src="./img/age.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/applePay.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/googlePay.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/visa.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/mastercard.svg" alt="favbet")
-        .footer__btns
-            a(href="https://apps.apple.com/ua/app/favbet-ua/id1580749519" target="_blank").footer__appstore
-            a(href="https://favbet.ua/minio/android-files/FavbetUA.apk" target="_blank").footer__googlePlay
-.legal УЧАСТЬ В АЗАРТНИХ ІГРАХ МОЖЕ ВИКЛИКАТИ ІГРОВУ ЗАЛЕЖНІСТЬ. ДОТРИМУЙТЕСЯ ПРАВИЛ (ПРИНЦИПІВ) ВІДПОВІДАЛЬНОЇ ГРИ
+.fav-page
+    .promo
+        .promo__title
+            .promo__title-text Вболівай <br> за Шахтар <br> у Єврокубках!
+        .promo__match
+            .promo__match-team арсенал
+            .promo__match-decor
+            .promo__match-team шахтар
+        .promo__date
+            .promo__date-item 22.10
+            .promo__date-item 22:00
+        .promo__bottom
+            .promo__bottom-title Акція «Шлях чемпіонів»
+            .promo__bottom-text *Під призовим фондом у 200 000 ₴ мається на увазі отримання призу у вигляді електронних грошових замінників в Акції «Шлях чемпіонів». Деталі на сайті www.favbet.ua. <br> Період дії акції – з 18.10.2024 до 21:30 22.10.2024 року
+    .prize
+        .prize__title.title ПРОГНОЗУЙ РЕЗУЛЬТАТИ МАТЧІВ
+        .prize__subtitle ТА РОЗДІЛЯЙ ПРИЗОВИЙ ФОНД
+        .prize__img
+        .prize__text З 21 жовтня до 29 січня 2025 року бери участь в Акції «Віщун з Шахтарем»  Роби свої прогнози на результати матчів в основний час кожного окремого футбольного матчу в рамках Ліги чемпіонів”, роби виграшні ставки від 200 ₴ та отримай шанс розділити загальний призовий фонд 200 000 ₴
+        a(href="#").prize__btn.btn #[span.btn-text(data-translate="mainBtn") авторизуйся]
+    .guide
+        .guide__title.title  Як взяти участь?
+        .guide__list
+            .guide__list-item
+                .guide__list-item-num
+                    picture
+                        source(media="(max-width: 1050px)" srcset="./img/num1-mob.png")
+                        img(src="./img/guide/num1-desc.png" alt="1")
+                .guide__list-item-text Обери <br> точний рахунок
+                .guide__list-btn
+                .guide__list-popup
+                    .guide__list-popup-close
+                    .guide__list-popup-scroll
+                        h2 1. Обери точний рахунок
+                        p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач та обери точний рахунок матчу протягом кожного окремого етапу проведення Акції.
+
+            .guide__list-item
+                .guide__list-item-num
+                    picture
+                        source(media="(max-width: 1050px)" srcset="./img/num2-mob.png")
+                        img(src="./img/guide/num2-desc.png" alt="1")
+                .guide__list-item-text Натисни кнопку <br> «Зробити прогноз»
+                .guide__list-btn
+                .guide__list-popup
+                    .guide__list-popup-close
+                    .guide__list-popup-scroll
+                        h2 1. Обери точний рахунок
+                        p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач та обери точний рахунок матчу протягом кожного окремого етапу проведення Акції.
+            .guide__list-item
+                .guide__list-item-num
+                    picture
+                        source(media="(max-width: 1050px)" srcset="./img/num3-mob.png")
+                        img(src="./img/guide/num3-desc.png" alt="1")
+                .guide__list-item-text Зроби ставку від 200₴ <br> лише «Ординар» <br> коефіцієнт від 2.0
+                .guide__list-btn
+                .guide__list-popup
+                    .guide__list-popup-close
+                    .guide__list-popup-scroll
+                        h2 1. Обери точний рахунок
+                        p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач та обери точний рахунок матчу протягом кожного окремого етапу проведення Акції.
+    .predict
+        .predict__title.title  ЗРОБИ СВІЙ ПРОГНОЗ
+        .predict__counter
+            .predict__team1
+                .predict__team1-decrease
+                .predict__team1-increase
+            .predict__score #[span.predict__score-team1 0] / #[span.predict__score-team2 0]
+            .predict__team2
+                .predict__team2-decrease
+                .predict__team2-increase
+        .predict__btn.btn #[span.btn-text(data-translate="mainBtn") авторизуйся]
+        .predict__wrap
+            .predict__last
+                .predict__last-title Твій останній прогноз:
+                .predict__last-score
+                    .predict__last-team1 Манчестер Сіті
+                    .predict__last-counter 0 / 0
+                    .predict__last-team2 Інтер Мілан
+            .predict__bet
+                .predict__bet-true
+                    span Ставка підтверджена
+                .predict__bet-false
+                    span Ставка не підтверджена
+    .table
+        .table__pers
+        .table__cup
+        .table__light
+        .table__title.title учасники
+        .table__wrap
+            .table__head
+                .table__head-item ID гравця
+                .table__head-item дата та час
+                .table__head-item прогноз
+                .table__head-item приз*
+            .table__body
+                .table__body-scroll
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+                    .table__row
+                        .table__row-item ******67
+                        .table__row-item 08.08.2023 / 20:00
+                        .table__row-item 2:0
+                        .table__row-item **************
+        .table__bottom.
+            *сума отриманого призу у вигляді електронних грошових замінників буде
+             відома після закінчення матчу та додана в таблицю наступного робочого дня після
+             закінчення матчу, а саме 23.10. Призовий фонд буде розподілено між учасниками,
+             які вказали точний рахунок виключно основного часу матчу та зробили підтверджувальну ставку,
+             умови якої прописані в Офіційних правилах участі в Акції «Шлях чемпіонів» в п.9.3 та 9.4.
+        a(href="#").table__btn.btn #[span.btn-text(data-translate="mainBtn") авторизуйся]
+    .drop
+        details.dropdown
+            summary(data-translate="rulesTitle") Офіційні правила участі в Акції «Спортивний віщун»
+            .drop-txt
+                .drop-txt-list(data-translate="rulesTxt")
+                    h2 1. Натисни кнопку «Взяти участь».
+                    p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач. Натисни кнопку «Взяти участь» на сторінці акції.
+                    h2 2. Роби ставки на спортивні події на казино.
+                    p З 23 жовтня по 19 листопада 2023 року роби ставки протягом 4-х акційних тижнів на спортивні події та крути слоти в казино у розділах Спорт, LIVE та Казино та заробляй по 1 балу за кожні 200 UAH.
+                    p Ставки на спортивні події повинні бути від 200 UAH розраховані з результатом «Виграш» та з коефіцієнтом від 1.5 (ординар) або від 3.5 (експрес від 3 подій), без використання «CashOut» та «Повернення ставки».Ставки в розділі Казино повинні бути від 5 UAH.
+                    h2 3. Отримуй бали та вигравай призи.
+                    p Чим більше балів, тим більше шансів здобути приз.
+                    p Бали нараховуватимуться та відображатимуться в таблиці «Результати». Після завершення кожного Акційного тижня перших 300 переможців, які наберуть найбільше балів, матимуть право на отримання бонусних призів.
+                    h2 4. Накопичуй квитки та приймай участь у розіграші.Щотижня приймай участь в розіграші спортивних призів Акції.
+                    p Квитки нараховуватимуться та відображатимуться в таблиці «Результати» за бали. Отримуй за кожні 5 балів по 1 квитку. Чим більше квитків, тим більше шансів виграти приз. Щотижня приймай участь в розіграші спортивних призів Акції. Розіграш буде проведено в онлайн-трансляцію на YouTube з посиланням на відео на сторінці Акції.
+                    p Переможці розіграшу будуть опубліковані  в таблиці “Результати” протягом 72 годин після закінчення акційного тижня та відео розіграшу буде опубліковано на офіційному каналі платформи YouTube за посиланням https://www.youtube.com/@favbetua.
