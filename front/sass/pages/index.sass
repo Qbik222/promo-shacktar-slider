@@ -91,6 +91,8 @@ body.light
   -webkit-text-fill-color: transparent
   font-family: $font-suisse-intl-med
   text-shadow: 9px 5px 8px rgba(0, 0, 0, 0.48)
+  z-index: 1
+  text-align: center
 
 .fav-page
   display: flex
@@ -99,6 +101,7 @@ body.light
   flex-direction: column
   background: $second-blue
   padding: 0 0 20px 0
+  overflow: hidden
 
 .promo
   width: 100%
@@ -110,6 +113,10 @@ body.light
   padding: 50px 60px 25px 50px
   min-height: 44vw
   position: relative
+  @media screen and (max-width: 1050px)
+    background: url("../img/promo/promo-tab.jpg") no-repeat 100% 0/cover
+  @media screen and (max-width: 600px)
+    background: url("../img/promo/promo-mob.jpg") no-repeat 50% 70px/cover
   &::before
     content: ""
     display: block
@@ -240,6 +247,8 @@ body.light
     letter-spacing: .14em
     font-family: $font-suisse-intl-semib
     z-index: 1
+    text-align: center
+
   &__img
     width: 806px
     height: 174px
@@ -274,6 +283,9 @@ body.light
   background: url("../img/guide/guide-desc.png") no-repeat 50% 100%/cover
   background-size: 1920px 550px
   position: relative
+  @media screen and (max-width: 1050px)
+    background: url("../img/guide/guide-tab.png") no-repeat 50% 100%/cover
+    background-size: 100% 100%
   &::before
     content: ""
     display: block
@@ -320,6 +332,15 @@ body.light
         display: flex
         flex-direction: column
         gap: 5px
+        scrollbar-width: auto
+        &::-webkit-scrollbar
+          width: 1px
+          background: transparent
+
+        &::-webkit-scrollbar-thumb
+          width: 1px
+          background: $second-blue
+
         h2, h3, h4, h5, h6
           text-transform: uppercase
           letter-spacing: .02em
@@ -394,12 +415,12 @@ body.light
   flex-direction: column
   align-items: center
   justify-content: flex-start
-  background: $second-blue url("../img/predict/predict-desc.png") no-repeat 0 100%/cover
+  background: $second-blue url("../img/predict/predict-desc.png") no-repeat 50% 100%/cover
   position: relative
   @media screen and (max-width: 1050px)
-    background: $second-blue url("../img/predict/predict-tab.png") no-repeat 0 100%/cover
+    background: $second-blue url("../img/predict/predict-tab.png") no-repeat 50% 100%/cover
   @media screen and (max-width: 600px)
-    background: $second-blue url("../img/predict/predict-mob.png") no-repeat 0 100%/cover
+    background: $second-blue url("../img/predict/predict-mob.png") no-repeat 50% 100%/cover
   &::before, &::after
     content: ""
     display: block
@@ -431,7 +452,7 @@ body.light
     &-increase, &-decrease
       width: 66px
       height: 66px
-      transition: transform .2s ease-in-out
+      transition: transform .1s ease-in-out
       user-select: none
     &-increase
       background: url("../img/btn-plus.png") no-repeat 0 0/contain
@@ -544,12 +565,51 @@ body.light
   align-items: center
   justify-content: flex-start
   width: 100%
-  background: $second-blue url("../img/table/table-desc.png") no-repeat 0 0/cover
+  background: $second-blue url("../img/table/table-desc.png") no-repeat 50% 0/cover
+  background-size: auto 1450px
   position: relative
   @media screen and (max-width: 1050px)
     background: $second-blue url("../img/table/table-tab.png") no-repeat 0 0/cover
   @media screen and (max-width: 600px)
     background: $second-blue url("../img/table/table-mob.png") no-repeat 0 0/cover
+  &::before
+    content: ""
+    display: block
+    width: 100%
+    height: 25%
+    background: linear-gradient(180deg, #00002C 0%, rgba(0, 0, 44, 0) 100%)
+    position: absolute
+    top: -2px
+    left: 0
+    z-index: 0
+  &::after
+    content: ""
+    display: block
+    width: 100%
+    height: 25%
+    background: linear-gradient(0deg, #00002C 0%, rgba(0, 0, 44, 0) 100%)
+    position: absolute
+    bottom: -2px
+    left: 0
+    z-index: 0
+  &__pers
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: 0
+    width: 390px
+    height: 600px
+    background: url("../img/table/pers-desc.png") no-repeat 0 0/contain
+  &__cup
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 0
+    width: 390px
+    height: 600px
+    background: url("../img/table/cup-desc.png") no-repeat 0 0/contain
+  &__btn
+    z-index: 1
   &__wrap
     display: flex
     flex-direction: column
@@ -563,6 +623,15 @@ body.light
     max-height: 550px
     overflow: hidden
     margin-top: 45px
+  &__light
+    position: absolute
+    z-index: 0
+    width: 100%
+    height: 400px
+    top: 60px
+    background: url("../img/table/lightning-desc.png") no-repeat 0 0/contain
+  &__title
+    z-index: 1
   &__body
     padding: 20px 60px
     width: 100%
@@ -624,6 +693,7 @@ body.light
     font-family: $font-suisse-intl-reg
     margin-top: 25px
     opacity: .7
+    z-index: 1
   &__btn
     margin-top: 25px
 
@@ -631,7 +701,7 @@ body.light
   max-width: 900px
   margin: auto
   width: 100%
-  padding-top: 20px
+  padding: 20px 10px 0 10px
   .dropdown
     outline: none!important
     cursor: pointer
@@ -689,6 +759,7 @@ body.light
       background: linear-gradient(137deg, rgba($white, 0.1) 0%, rgba($white, 0.05) 100%)
       border-radius: 20px
       backdrop-filter: blur(10px)
+      border: 1px solid $yellow
       &-list
         max-height: 500px
         overflow-y: scroll
@@ -701,7 +772,7 @@ body.light
           position: relative
           border-radius: 50px
           background: $green
-      p
+      p, h2
         margin-bottom: 10px
         font-family: $font-suisse-intl-reg
         display: block
