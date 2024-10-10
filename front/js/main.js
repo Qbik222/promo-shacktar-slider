@@ -53,4 +53,39 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     setScore(team1, ".predict__score-team1", ".predict__team1-decrease", ".predict__team1-increase")
     setScore(team2, ".predict__score-team2", ".predict__team2-decrease", ".predict__team2-increase")
+
+    // scroll add anim
+
+    const tableLightning = document.querySelector('.table');
+    const prizeLightning = document.querySelector('.prize');
+    const promoTitle = document.querySelector('.promo__title');
+
+    function animateOnScroll(element, animationClass) {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(animationClass);
+                } else {
+                    entry.target.classList.remove(animationClass);
+                }
+            });
+        }, options);
+
+        observer.observe(element);
+    }
+    animateOnScroll(tableLightning, "tableLightning")
+    animateOnScroll(prizeLightning, "prizeLightning")
+
+    const titles = document.querySelectorAll(".title")
+
+    titles.forEach(title =>{
+        animateOnScroll(title, "fadeIn")
+    })
+
 })

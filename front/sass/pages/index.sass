@@ -1,9 +1,7 @@
-$blue: #000055
 $second-blue: #00002C
 $white: #ffffff
 $magenta: #FF267E
 $green: #05C48A
-$black: #1B1B1F
 $gray: #EDEDED
 $yellow: #FFCE64
 $second-yellow: #C4A505
@@ -11,17 +9,17 @@ $second-yellow: #C4A505
 $font-suisse-intl-reg: SuisseIntl-Regular, sans-serif
 $font-suisse-intl-med: SuisseIntl-Medium, sans-serif
 $font-suisse-intl-semib: SuisseIntl-SemiBold, sans-serif
-$font-exo2-regular: Exo2-Regular, sans-serif
+//$font-exo2-regular: Exo2-Regular, sans-serif
+
 body
   overscroll-behavior: none
-  //background: $blue
   background: $second-blue
   -webkit-tap-highlight-color: transparent
   img
     max-width: 100%
     height: auto
 
-body.light
+body.light, body.dark
   background: $second-blue
 
 .hide
@@ -29,9 +27,7 @@ body.light
 
 .btn
   border-radius: 10px
-  //border: 1px solid $white
   background: linear-gradient(180deg, rgba(5, 196, 138, 0.80) 31.96%, rgba(0, 109, 76, 0.70) 90%)
-  //backdrop-filter: blur(40px)
   padding: 23px 70px 21px 70px
   position: relative
   transition: transform .3s ease-in-out
@@ -51,8 +47,6 @@ body.light
   &::after
     content: "крок 1"
     display: inline-block
-    //max-width: 96px
-    //max-height: 32px
     color: $white
     border-radius: 20px
     background: linear-gradient(136deg, rgba(0, 0, 0, 0.10) 2.23%, rgba(0, 0, 0, 0.05) 100%)
@@ -93,7 +87,8 @@ body.light
   text-shadow: 9px 5px 8px rgba(0, 0, 0, 0.48)
   z-index: 1
   text-align: center
-
+  opacity: 0
+  transition: opacity .4s ease-in-out
 .fav-page
   display: flex
   align-items: center
@@ -102,7 +97,6 @@ body.light
   background: $second-blue
   padding: 0 0 20px 0
   overflow: hidden
-
 .promo
   width: 100%
   display: flex
@@ -189,11 +183,8 @@ body.light
         border-top-right-radius: 9px
         text-align: left
         padding: 6px 10px 5px 15px
-
   &__bottom
     max-width: 350px
-    //margin-top: 100px
-    //margin-top: auto
     margin-bottom: auto
     opacity: .6
     &-title, &-text
@@ -227,6 +218,8 @@ body.light
     left: 0
     top: 100px
     z-index: 0
+    opacity: 0
+    transition: opacity .5s ease-in-out
   &:after
     content: ""
     display: block
@@ -237,6 +230,9 @@ body.light
     right: 0
     top: 100px
     z-index: 0
+    opacity: 0
+    transition: opacity .5s ease-in-out
+
   &__title
     z-index: 1
   &__subtitle
@@ -613,6 +609,8 @@ body.light
     background: url("../img/table/cup-desc.png") no-repeat 0 0/contain
   &__btn
     z-index: 1
+    &::after
+      content: "крок 2"
   &__wrap
     display: flex
     flex-direction: column
@@ -633,6 +631,8 @@ body.light
     height: 400px
     top: 60px
     background: url("../img/table/lightning-desc.png") no-repeat 0 0/contain
+    opacity: 0
+    transition: opacity .4s ease-in-out
   &__title
     z-index: 1
   &__body
@@ -808,3 +808,76 @@ body.light
           border-radius: 50%
           display: inline-block
           margin: 0 5px 2px 0
+
+@keyframes leftLightning
+  0%
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+  25%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+  80%
+    opacity: 0
+  85%
+    opacity: 1
+  90%
+    opacity: 0
+  95%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes rightLightning
+  0%
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+  25%
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%)
+  80%
+    opacity: 0
+  85%
+    opacity: 1
+  90%
+    opacity: 0
+  95%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes lightningStrike
+  0%
+    clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)
+  50%
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+  80%
+    opacity: 0
+  85%
+    opacity: 1
+  90%
+    opacity: 0
+  95%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes fadeIn
+  0%
+    transform: translate(0, -50%)
+    opacity: 0
+  100%
+    transform: translate(0, 0%)
+    opacity: 1
+
+.fadeIn
+  animation: fadeIn 1s ease-in-out
+  opacity: 1
+
+.tableLightning
+  .table__light
+    animation: lightningStrike 1.7s ease-in-out
+    opacity: 1
+
+.prizeLightning
+  &::before
+    animation: leftLightning 1.3s ease-in-out
+    opacity: 1
+  &::after
+    animation: rightLightning 1.3s ease-in-out
+    opacity: 1
