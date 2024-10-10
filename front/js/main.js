@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     // scroll add anim
 
     const tableLightning = document.querySelector('.table');
+    const tableCup = document.querySelector('.table__cup');
+    const tablePers = document.querySelector('.table__pers');
     const prizeLightning = document.querySelector('.prize');
     const promoTitle = document.querySelector('.promo__title');
 
@@ -80,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () =>{
         observer.observe(element);
     }
     animateOnScroll(tableLightning, "tableLightning")
+    animateOnScroll(tableCup, "fadeInLeft")
+    animateOnScroll(tablePers, "fadeInRight")
     animateOnScroll(prizeLightning, "prizeLightning")
 
     const titles = document.querySelectorAll(".title")
