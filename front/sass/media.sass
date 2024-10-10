@@ -76,12 +76,12 @@
       &-popup
         width: 340px
         height: 180px
-        padding: 20px
+        padding: 20px 40px 20px 20px
         right: -70px
         &-scroll
           height: 140px
         &-close
-          right: 25px
+          right: 15px
   .predict
     &__team1, &__team2
       width: 170px
@@ -252,6 +252,9 @@
       margin-top: 100px
 
 @media screen and (max-width: 600px)
+  .title
+    font-size: 28px
+    z-index: 2
   .promo
     height: 850px
     //height: 205vw
@@ -273,7 +276,7 @@
       height: 160px
       z-index: 1
     &__bottom
-      margin: auto auto 15px auto
+      margin: auto auto 45px auto
       width: 100%
       text-align: center
       max-width: 350px
@@ -283,16 +286,151 @@
       margin-top: 10px
     &__date
       margin-top: 10px
+  .prize
+    padding: 30px 10px
+    &__title
+      font-size: 36px
+      margin-top: -80px
+    &__img
+      width: 125vw
+      height: 30vw
+      margin-top: 10px
+  .guide
+    padding: 30px 10px
+    background: $second-blue
+    &::before, &::after
+      width: 20%
+      height: 100%
+    &::before
+      left: 0
+      top: 0
+      background: url("../img/guide/guide-mob-left.png") no-repeat 0 0/cover
+      background-size: 100% 100%
+    &::after
+      left: auto
+      right: 0
+      top: 0
+      bottom: auto
+      background: url("../img/guide/guide-mob-right.png") no-repeat 0 0/cover
+      background-size: 100% 100%
+    &__list
+      transform: scale(1)
+      flex-direction: column
+      z-index: 2
+      &-item
+        &:nth-child(1), &:nth-child(2), &:nth-child(3)
+          .guide__list-popup
+            right: -60px
+    &__decor
+      display: block
+      z-index: 1
+      &::before, &::after
+        content: ""
+        display: block
+        width: 100%
+        height: 20%
+        position: absolute
+        left: 0
+        z-index: 0
+      &::before
+        background: linear-gradient(180deg, #00002C 20%, rgba(0, 0, 44, 0) 100%)
+        top: 0
+      &::after
+        background: linear-gradient(0deg, #00002C 20%, rgba(0, 0, 44, 0) 100%)
+        bottom: 0
+  .predict
+    padding: 30px
+    &__wrap
+      width: 340px
+      transform: scale(1)
+      min-width: auto
+    &__last
+      &-score
+        justify-content: center
+      &-counter
+        margin: 0 12px
+        font-size: 14px
+      &-team1, &-team2
+        font-size: 14px
+        line-height: 18px
+        width: 110px
+        white-space: nowrap
+        text-align: center
+
+    &__bet
+      margin-top: 20px
+      &-true, &-false
+        width: 50%
+        font-size: 12px
+        line-height: 18px
+        text-align: center
+      &-true
+        padding: 9px 18px 9px 28px
+      &-false
+        padding: 9px 16px 9px 21px
+  .table
+    &__wrap
+      //min-width: 375px
+      max-width: 100%
+      transform: scale(1)
+      margin: 15px 0 0 0
+      border-radius: 0
+      border-right: none
+      border-left: none
+    &__head
+      padding: 20px
+      &-item
+        font-size: 11px
+    &__row
+      &-item
+        font-size: 13px
+        &:nth-child(3)
+          text-align: center
+    &__body
+      padding: 15px 10px 15px 20px
+      &-scroll
+        padding-right: 10px
+    &__bottom
+      padding: 0 10px
+  .drop
+    .dropdown
+      summary
+        font-size: 14px
+        line-height: 20px
+        padding: 20px 65px 20px 20px
+      .drop-txt
+        padding: 30px 20px
+        font-size: 12px
+        line-height: 20px
 
 @media screen and (max-width: 420px)
   .promo
     height: 750px
 
+@media screen and (max-width: 420px) and (max-height: 740px)
+  .promo
+    background-position: 50% 0
+
+@media screen and (max-width: 395px)
+  .predict
+    &__team1, &__team2
+      width: 140px
+      height: 220px
+      &-increase, &-decrease
+        width: 40px
+        height: 40px
+    &__score
+      width: 280px
+      height: 280px
+    &__last
+      &-score
+        margin-top: 5px
 @media screen and (max-width: 390px) and (max-height: 700px)
   .promo
     height: 660px
     background-position: 50% 20px
     padding-bottom: 10px
+
 
 @media screen and (max-width: 375px) and (max-height: 600px)
   .promo
@@ -308,3 +446,52 @@
     &__bottom
       &-text
         line-height: 14px
+
+@media screen and (max-width: 360px)
+  .guide
+    &__list
+      &-popup
+        transform: scale(.8)
+  .predict
+    &__wrap
+      transform: scale(.9)
+      margin: -15px 0 -25px 0
+  .table
+    &__head
+      &-item
+        font-size: 10px
+    &__row
+      &-item
+        font-size: 11px
+
+@media screen and (max-width: 337px)
+  .btn
+    transform: scale(.9)
+    &:hover
+      transform: scale(.95)
+  .predict
+    &__counter
+      gap: 20px
+  .table
+    &__head
+      &-item
+        font-size: 9px
+    &__row
+      &-item
+        font-size: 10px
+  .drop
+    .dropdown
+      summary
+        font-size: 13px
+        line-height: 18px
+
+@media screen and (max-width: 325px)
+  .promo
+    &__title, &__match
+      transform: scale(.9)
+
+
+@media screen and (max-width: 650px) and (max-height: 375px) and (orientation:  landscape)
+  .promo
+    background: url("../img/promo/promo-tab.jpg") no-repeat 34% 0/cover
+    height: auto
