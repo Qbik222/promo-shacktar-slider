@@ -92,9 +92,4 @@ document.addEventListener("DOMContentLoaded", () =>{
         animateOnScroll(title, "fadeIn")
     })
 
-    //for test
-    document.querySelector(".enBtn").addEventListener("click", () =>{
-        document.querySelector(".fav-page").classList.toggle("en")
-    })
-
 })
