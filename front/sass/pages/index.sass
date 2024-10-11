@@ -336,7 +336,7 @@ body.light, body.dark
       padding: 30px 40px 30px 30px
       border: 1px solid $yellow
       border-radius: 20px
-      z-index: 2
+      z-index: 5
       &-scroll
         height: 156px
         overflow-y: scroll
@@ -361,7 +361,6 @@ body.light, body.dark
           -webkit-background-clip: text
           -webkit-text-fill-color: transparent
           font-family: $font-suisse-intl-med
-          text-shadow: 9px 5px 8px rgba(0, 0, 0, 0.48)
           font-size: 16px
         p, strong, span
           font-size: 16px
@@ -554,7 +553,7 @@ body.light, body.dark
       text-transform: uppercase
       font-size: 18px
       line-height: 22px
-      border: 1px solid $yellow
+      border: 1px solid rgba($yellow, .2)
     &-true
       padding: 17px 45px 15px 56px
       color: $green
@@ -770,9 +769,6 @@ body.light, body.dark
     .drop-txt
       margin-top: 5px
       overflow-wrap: break-word
-      font-size: 14px
-      line-height: 22px
-      color: $gray
       padding: 30px 43px 28px 25px
       text-align: start
       cursor: auto
@@ -793,10 +789,13 @@ body.light, body.dark
           position: relative
           border-radius: 50px
           background: $green
-      p, h2
+      p, h2, h3, h4, h5, h6, strong, span
         margin-bottom: 10px
         font-family: $font-suisse-intl-reg
         display: block
+        font-size: 14px
+        line-height: 22px
+        color: $gray
         &:last-child
           margin-bottom: 0
         a
@@ -945,3 +944,10 @@ body.light, body.dark
       @media screen and (max-width: 600px)
         background: url("../img/promo/title-mob-en.png") no-repeat 0 0/cover
         width: 310px
+    @media screen and (max-width: 750px) and (max-height: 350px) and (orientation: landscape)
+      &__match, &__title
+        transform: scale(.7)
+      &__match
+        transform-origin: left top
+      &__title
+        transform-origin: bottom left
