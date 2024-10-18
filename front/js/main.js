@@ -19,7 +19,7 @@
 
     let i18nData = {};
     let userId;
-    // userId = 7777777;
+    // userId = 100300268
 
     function loadTranslations() {
         return fetch(`${apiURL}/translates/${locale}`).then(res => res.json())

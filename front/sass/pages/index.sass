@@ -44,7 +44,7 @@ body.light, body.dark
     filter: blur(2px)
     height: 90%
   &::after
-    content: "крок 1"
+    //content: "крок 1"
     display: inline-block
     color: $white
     border-radius: 20px
@@ -627,8 +627,8 @@ body.light, body.dark
     transition: opacity .4s ease-in-out
   &__btn
     z-index: 1
-    &::after
-      content: "крок 2"
+    //&::after
+    //  content: "крок 2"
   &__wrap
     display: flex
     flex-direction: column
@@ -954,6 +954,7 @@ body.light, body.dark
         font-family: $font-suisse-intl-reg
         color: $magenta
         margin-left: 3px
+        margin-right: 5px
         font-size: 18px
         @media screen and (max-width: 700px)
           font-size: 10px
@@ -966,27 +967,41 @@ body.light, body.dark
         &:after
           content: "(you)"
 
+
+
 //en styles
 .fav-page.en
   .promo
+    @media screen and (max-width: 1050px)
+      background-position: 0 0
+    @media screen and (max-width: 700px)
+      background-position: 50% 0
     &__title
       background: url("https://fav-prom.com/html/shakhtar-predictor/img/promo/title-desc-en.png") no-repeat 0 0/cover
       padding: 25px 20px 0 0
+      &-text
+        margin-right: -70px
       @media screen and (max-width: 1300px)
         padding: 25px 10px 0 0
-        height: 230px
+        height: 210px
+        width: 425px
         &-text
-          font-size: 20px
-          line-height: 30px
-      @media screen and (max-width: 950px)
+          font-size: 18px
+          line-height: 26px
+      @media screen and (max-width: 1050px)
         height: 150px
+        width: 320px
         padding: 12px 0 0 0
         &-text
           font-size: 14px
           line-height: 19px
+          margin-right: -50px
       @media screen and (max-width: 600px)
         background: url("https://fav-prom.com/html/shakhtar-predictor/img/promo/title-mob-en.png") no-repeat 0 0/cover
         width: 310px
+        &-text
+          max-width: 140px
+          margin: -10px -40px 0 0
     @media screen and (max-width: 750px) and (max-height: 350px) and (orientation: landscape)
       &__match, &__title
         transform: scale(.7)
@@ -994,3 +1009,14 @@ body.light, body.dark
         transform-origin: left top
       &__title
         transform-origin: bottom left
+  .predict
+    &__team1
+      background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/left-team-desc-en.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1050px)
+        background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/left-team-mob-en.png") no-repeat 0 0/contain
+    &__team2
+      background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/right-team-desc-en.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1050px)
+        background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/right-team-mob-en.png") no-repeat 0 0/contain
+
+
