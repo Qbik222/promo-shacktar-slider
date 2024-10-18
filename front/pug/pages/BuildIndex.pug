@@ -1,11 +1,11 @@
-.fav-page
+.fav-page#shakhtar
     .promo
         .promo__title
             .promo__title-text(data-translate="promoTitle") Вболівай <br> за Шахтар <br> у Єврокубках!
         .promo__match
-            .promo__match-team(data-translate="promoTeam1") арсенал
+            .promo__match-team(data-translate="team-1") арсенал
             .promo__match-decor
-            .promo__match-team(data-translate="promoTeam2") шахтар
+            .promo__match-team(data-translate="team-2") шахтар
         .promo__date
             .promo__date-item(data-translate="promoDate") 22.10
             .promo__date-item(data-translate="promoTime") 22:00
@@ -17,15 +17,15 @@
         .prize__subtitle(data-translate="prizeSubtitle") ТА РОЗДІЛЯЙ ПРИЗОВИЙ ФОНД
         .prize__img
         .prize__text(data-translate="prizeText") З 21 жовтня до 29 січня 2025 року бери участь в Акції «Віщун з Шахтарем»  Роби свої прогнози на результати матчів в основний час кожного окремого футбольного матчу в рамках Ліги чемпіонів”, роби виграшні ставки від 200 ₴ та отримай шанс розділити загальний призовий фонд 200 000 ₴
-        a(href="#").prize__btn.btn #[span.btn-text(data-translate="mainBtn") авторизуйся]
+        a(href="/login/" role="button").prize__btn.btn.unauth-msg #[span.btn-text(data-translate="loginBtn") авторизуйся]
     .guide
-        .guide__title.title(data-translate="guideTitle")  Як взяти участь?
+        .guide__title.title(data-translate="guideTitle") Як взяти участь?
         .guide__list
             .guide__list-item
                 .guide__list-item-num
                     picture
-                        source(media="(max-width: 1050px)" srcset="./img/guide/num1-mob.png")
-                        img(src="./img/guide/num1-desc.png" alt="1")
+                        source(media="(max-width: 1050px)" srcset="https://fav-prom.com/html/shakhtar-predictor/img/guide/num1-mob.png")
+                        img(src="https://fav-prom.com/html/shakhtar-predictor/img/guide/num1-desc.png" alt="1")
                 .guide__list-item-text(data-translate="guideTextNum1") Обери <br> точний рахунок
                 .guide__list-btn
                 .guide__list-popup
@@ -37,8 +37,8 @@
             .guide__list-item
                 .guide__list-item-num
                     picture
-                        source(media="(max-width: 1050px)" srcset="./img/guide/num2-mob.png")
-                        img(src="./img/guide/num2-desc.png" alt="2")
+                        source(media="(max-width: 1050px)" srcset="https://fav-prom.com/html/shakhtar-predictor/img/guide/num2-mob.png")
+                        img(src="https://fav-prom.com/html/shakhtar-predictor/img/guide/num2-desc.png" alt="2")
                 .guide__list-item-text(data-translate="guideTextNum2") Натисни кнопку <br> «Зробити прогноз»
                 .guide__list-btn
                 .guide__list-popup
@@ -49,8 +49,8 @@
             .guide__list-item
                 .guide__list-item-num
                     picture
-                        source(media="(max-width: 1050px)" srcset="./img/guide/num3-mob.png")
-                        img(src="./img/guide/num3-desc.png" alt="3")
+                        source(media="(max-width: 1050px)" srcset="https://fav-prom.com/html/shakhtar-predictor/img/guide/num3-mob.png")
+                        img(src="https://fav-prom.com/html/shakhtar-predictor/img/guide/num3-desc.png" alt="3")
                 .guide__list-item-text(data-translate="guideTextNum3") Зроби ставку від 200₴ <br> лише «Ординар» <br> коефіцієнт від 2.0
                 .guide__list-btn
                 .guide__list-popup
@@ -63,22 +63,32 @@
         .predict__title.title(data-translate="predictTitle")  ЗРОБИ СВІЙ ПРОГНОЗ
         .predict__counter
             .predict__team1
-                .predict__team1-decrease
-                .predict__team1-increase
-            .predict__score #[span.predict__score-team1 0] / #[span.predict__score-team2 0]
+                .predict__team1-decrease.team1-minus(role="button")
+                .predict__team1-increase.team1-plus(role="button")
+            .predict__score #[span.predictionTeam1 0] / #[span.predictionTeam2 0]
             .predict__team2
-                .predict__team2-decrease
-                .predict__team2-increase
-        .predict__btn.btn #[span.btn-text(data-translate="mainBtn") авторизуйся]
+                .predict__team2-decrease.team2-minus(role="button")
+                .predict__team2-increase.team2-plus(role="button")
+
+        a(href="/login/" role="button").predict__btn.btn.unauth-msg #[span.btn-text(data-translate="loginBtn") авторизуйся]
+        .predict__btn.took-part.btn.hide #[span.btn-text(data-translate="mainBtn" role="button")]
+
+        .predict__yourBet.hide(data-translate="yourBet") Дякую, твій прогноз прийнятий
+
         .predict__wrap
             .predict__last
                 .predict__last-title(data-translate="predictLastTitle") Твій останній прогноз:
                 .predict__last-score
-                    .predict__last-team1(data-translate="predictLastTeam1") Манчестер Сіті
-                    .predict__last-counter(data-translate="predictLastCounter") 0 / 0
-                    .predict__last-team2(data-translate="predictLastTeam2") Інтер Мілан
+                    .predict__last-team1(data-translate="team-1") Манчестер Сіті
+                    .predict__last-counter #[span.scoreTeam1 0] / #[span.scoreTeam2 0]
+                    .predict__last-team2(data-translate="team-2") Інтер Мілан
+
+            //.forecast__question
+            //    .forecast__question-item.forecast__question-item-green(data-translate='forecastTrue')
+            //    .forecast__question-item.forecast__question-item-orange.active(data-translate='forecastFalse')
+
             .predict__bet
-                .predict__bet-true
+                .predict__bet-true.hide
                     span(data-translate="predictBetTrue") Ставка підтверджена
                 .predict__bet-false
                     span(data-translate="predictBetFalse") Ставка не підтверджена
@@ -87,7 +97,7 @@
         .table__cup
         .table__light
         .table__title.title(data-translate="tableTitle") учасники
-        .table__wrap
+        .table__wrap#results-table
             .table__head
                 .table__head-item(data-translate="tableId") ID гравця
                 .table__head-item(data-translate="tableDate") дата та час
@@ -95,53 +105,13 @@
                 .table__head-item(data-translate="tablePrize") приз*
             .table__body
                 .table__body-scroll
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
-                    .table__row
-                        .table__row-item ******67
-                        .table__row-item 08.08.2023 / 20:00
-                        .table__row-item 2:0
-                        .table__row-item **************
         .table__bottom(data-translate="tableBottom").
             *сума отриманого призу у вигляді електронних грошових замінників буде
              відома після закінчення матчу та додана в таблицю наступного робочого дня після
              закінчення матчу, а саме 23.10. Призовий фонд буде розподілено між учасниками,
              які вказали точний рахунок виключно основного часу матчу та зробили підтверджувальну ставку,
              умови якої прописані в Офіційних правилах участі в Акції «Шлях чемпіонів» в п.9.3 та 9.4.
-        a(href="#").table__btn.btn #[span.btn-text(data-translate="mainBtnBet") зробити ставку]
+        a(href="/sports/event/soccer/41317793/" role="button").table__btn.btn #[span.btn-text(data-translate="mainBtnBet") зробити ставку]
     .drop
         details.dropdown
             summary(data-translate="rulesTitle") Офіційні правила участі в Акції «Спортивний віщун»
