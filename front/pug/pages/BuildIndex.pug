@@ -1,66 +1,59 @@
 .fav-page#shakhtar
     .promo
         .promo__title
-            .promo__title-text(data-translate="promoTitle") Вболівай <br> за Шахтар <br> у Єврокубках!
+            .promo__title-text(data-translate="promoTitle")
         .promo__match
-            .promo__match-team(data-translate="team-1") арсенал
+            .promo__match-team(data-translate="team-1")
             .promo__match-decor
-            .promo__match-team(data-translate="team-2") шахтар
+            .promo__match-team(data-translate="team-2")
         .promo__date
-            .promo__date-item(data-translate="promoDate") 22.10
-            .promo__date-item(data-translate="promoTime") 22:00
+            .promo__date-item(data-translate="promoDate")
+            .promo__date-item(data-translate="promoTime")
         .promo__bottom
-            .promo__bottom-title(data-translate="promoBottomTitle") Акція «Шлях чемпіонів»
-            .promo__bottom-text(data-translate="promoBottomText") *Під призовим фондом у 200 000 ₴ мається на увазі отримання призу у вигляді електронних грошових замінників в Акції «Шлях чемпіонів». Деталі на сайті www.favbet.ua. <br> Період дії акції – з 18.10.2024 до 21:30 22.10.2024 року
+            .promo__bottom-title(data-translate="promoBottomTitle")
+            .promo__bottom-text(data-translate="promoBottomText")
     .prize
-        .prize__title.title(data-translate="prizeTitle") ПРОГНОЗУЙ РЕЗУЛЬТАТИ МАТЧІВ
-        .prize__subtitle(data-translate="prizeSubtitle") ТА РОЗДІЛЯЙ ПРИЗОВИЙ ФОНД
+        .prize__title.title(data-translate="prizeTitle")
+        .prize__subtitle(data-translate="prizeSubtitle")
         .prize__img
-        .prize__text(data-translate="prizeText") З 21 жовтня до 29 січня 2025 року бери участь в Акції «Віщун з Шахтарем»  Роби свої прогнози на результати матчів в основний час кожного окремого футбольного матчу в рамках Ліги чемпіонів”, роби виграшні ставки від 200 ₴ та отримай шанс розділити загальний призовий фонд 200 000 ₴
-        a(href="/login/" role="button").prize__btn.btn.unauth-msg #[span.btn-text(data-translate="loginBtn") авторизуйся]
+        .prize__text(data-translate="prizeText")
+        a(href="/login/" role="button").prize__btn.btn.unauth-msg #[span.btn-text(data-translate="loginBtn")]
     .guide
-        .guide__title.title(data-translate="guideTitle") Як взяти участь?
+        .guide__title.title(data-translate="guideTitle")
         .guide__list
             .guide__list-item
                 .guide__list-item-num
                     picture
                         source(media="(max-width: 1050px)" srcset="https://fav-prom.com/html/shakhtar-predictor/img/guide/num1-mob.png")
                         img(src="https://fav-prom.com/html/shakhtar-predictor/img/guide/num1-desc.png" alt="1")
-                .guide__list-item-text(data-translate="guideTextNum1") Обери <br> точний рахунок
+                .guide__list-item-text(data-translate="guideTextNum1")
                 .guide__list-btn
                 .guide__list-popup
                     .guide__list-popup-close
                     .guide__list-popup-scroll(data-translate="guidePopupNum1")
-                        h2 1. Обери точний рахунок
-                        p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач та обери точний рахунок матчу протягом кожного окремого етапу проведення Акції.
-
             .guide__list-item
                 .guide__list-item-num
                     picture
                         source(media="(max-width: 1050px)" srcset="https://fav-prom.com/html/shakhtar-predictor/img/guide/num2-mob.png")
                         img(src="https://fav-prom.com/html/shakhtar-predictor/img/guide/num2-desc.png" alt="2")
-                .guide__list-item-text(data-translate="guideTextNum2") Натисни кнопку <br> «Зробити прогноз»
+                .guide__list-item-text(data-translate="guideTextNum2")
                 .guide__list-btn
                 .guide__list-popup
                     .guide__list-popup-close
                     .guide__list-popup-scroll(data-translate="guidePopupNum2")
-                        h2 1. Обери точний рахунок
-                        p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач та обери точний рахунок матчу протягом кожного окремого етапу проведення Акції.
             .guide__list-item
                 .guide__list-item-num
                     picture
                         source(media="(max-width: 1050px)" srcset="https://fav-prom.com/html/shakhtar-predictor/img/guide/num3-mob.png")
                         img(src="https://fav-prom.com/html/shakhtar-predictor/img/guide/num3-desc.png" alt="3")
-                .guide__list-item-text(data-translate="guideTextNum3") Зроби ставку від 200₴ <br> лише «Ординар» <br> коефіцієнт від 2.0
+                .guide__list-item-text(data-translate="guideTextNum3")
                 .guide__list-btn
                 .guide__list-popup
                     .guide__list-popup-close
                     .guide__list-popup-scroll(data-translate="guidePopupNum3")
-                        h2 1. Обери точний рахунок
-                        p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач та обери точний рахунок матчу протягом кожного окремого етапу проведення Акції.
         .guide__decor
     .predict
-        .predict__title.title(data-translate="predictTitle")  ЗРОБИ СВІЙ ПРОГНОЗ
+        .predict__title.title(data-translate="predictTitle")
         .predict__counter
             .predict__team1
                 .predict__team1-decrease.team1-minus(role="button")
@@ -70,61 +63,41 @@
                 .predict__team2-decrease.team2-minus(role="button")
                 .predict__team2-increase.team2-plus(role="button")
 
-        a(href="/login/" role="button").predict__btn.btn.unauth-msg #[span.btn-text(data-translate="loginBtn") авторизуйся]
+        a(href="/login/" role="button").predict__btn.btn.unauth-msg #[span.btn-text(data-translate="loginBtn")]
         .predict__btn.took-part.btn.hide #[span.btn-text(data-translate="mainBtn" role="button")]
 
-        .predict__yourBet.hide(data-translate="yourBet") Дякую, твій прогноз прийнятий
+        .predict__yourBet.hide(data-translate="yourBet")
 
         .predict__wrap
             .predict__last
-                .predict__last-title(data-translate="predictLastTitle") Твій останній прогноз:
+                .predict__last-title(data-translate="predictLastTitle")
                 .predict__last-score
-                    .predict__last-team1(data-translate="team-1") Манчестер Сіті
+                    .predict__last-team1(data-translate="team-1")
                     .predict__last-counter #[span.scoreTeam1 0] / #[span.scoreTeam2 0]
-                    .predict__last-team2(data-translate="team-2") Інтер Мілан
+                    .predict__last-team2(data-translate="team-2")
 
-            //.forecast__question
-            //    .forecast__question-item.forecast__question-item-green(data-translate='forecastTrue')
-            //    .forecast__question-item.forecast__question-item-orange.active(data-translate='forecastFalse')
-
-            .predict__bet
+            .predict__bet.hide
                 .predict__bet-true.hide
-                    span(data-translate="predictBetTrue") Ставка підтверджена
+                    span(data-translate="predictBetTrue")
                 .predict__bet-false
-                    span(data-translate="predictBetFalse") Ставка не підтверджена
+                    span(data-translate="predictBetFalse")
     .table
         .table__pers
         .table__cup
         .table__light
-        .table__title.title(data-translate="tableTitle") учасники
+        .table__title.title(data-translate="tableTitle")
         .table__wrap#results-table
             .table__head
-                .table__head-item(data-translate="tableId") ID гравця
-                .table__head-item(data-translate="tableDate") дата та час
-                .table__head-item(data-translate="tablePredict") прогноз
-                .table__head-item(data-translate="tablePrize") приз*
+                .table__head-item(data-translate="tableId")
+                .table__head-item(data-translate="tableDate")
+                .table__head-item(data-translate="tablePredict")
+                .table__head-item(data-translate="tablePrize")
             .table__body
                 .table__body-scroll
-        .table__bottom(data-translate="tableBottom").
-            *сума отриманого призу у вигляді електронних грошових замінників буде
-             відома після закінчення матчу та додана в таблицю наступного робочого дня після
-             закінчення матчу, а саме 23.10. Призовий фонд буде розподілено між учасниками,
-             які вказали точний рахунок виключно основного часу матчу та зробили підтверджувальну ставку,
-             умови якої прописані в Офіційних правилах участі в Акції «Шлях чемпіонів» в п.9.3 та 9.4.
-        a(href="/sports/event/soccer/41317793/" role="button").table__btn.btn #[span.btn-text(data-translate="mainBtnBet") зробити ставку]
+        .table__bottom(data-translate="tableBottom")
+        a(href="/sports/event/soccer/41317793/" role="button").table__btn.btn #[span.btn-text(data-translate="mainBtnBet")]
     .drop
         details.dropdown
-            summary(data-translate="rulesTitle") Офіційні правила участі в Акції «Спортивний віщун»
+            summary(data-translate="rulesTitle")
             .drop-txt
                 .drop-txt-list(data-translate="rulesTxt")
-                    h2 1. Натисни кнопку «Взяти участь».
-                    p Авторизуйся на акційній сторінці, натиснувши кнопку «Авторизуйся», або зареєструйся як користувач. Натисни кнопку «Взяти участь» на сторінці акції.
-                    h2 2. Роби ставки на спортивні події на казино.
-                    p З 23 жовтня по 19 листопада 2023 року роби ставки протягом 4-х акційних тижнів на спортивні події та крути слоти в казино у розділах Спорт, LIVE та Казино та заробляй по 1 балу за кожні 200 UAH.
-                    p Ставки на спортивні події повинні бути від 200 UAH розраховані з результатом «Виграш» та з коефіцієнтом від 1.5 (ординар) або від 3.5 (експрес від 3 подій), без використання «CashOut» та «Повернення ставки».Ставки в розділі Казино повинні бути від 5 UAH.
-                    h2 3. Отримуй бали та вигравай призи.
-                    p Чим більше балів, тим більше шансів здобути приз.
-                    p Бали нараховуватимуться та відображатимуться в таблиці «Результати». Після завершення кожного Акційного тижня перших 300 переможців, які наберуть найбільше балів, матимуть право на отримання бонусних призів.
-                    h2 4. Накопичуй квитки та приймай участь у розіграші.Щотижня приймай участь в розіграші спортивних призів Акції.
-                    p Квитки нараховуватимуться та відображатимуться в таблиці «Результати» за бали. Отримуй за кожні 5 балів по 1 квитку. Чим більше квитків, тим більше шансів виграти приз. Щотижня приймай участь в розіграші спортивних призів Акції. Розіграш буде проведено в онлайн-трансляцію на YouTube з посиланням на відео на сторінці Акції.
-                    p Переможці розіграшу будуть опубліковані  в таблиці “Результати” протягом 72 годин після закінчення акційного тижня та відео розіграшу буде опубліковано на офіційному каналі платформи YouTube за посиланням https://www.youtube.com/@favbetua.
