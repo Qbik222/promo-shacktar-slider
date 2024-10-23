@@ -465,20 +465,20 @@
                 rightCard.classList.add("right-anim");
                 console.log( current - 1, slides.length)
                 if(current + 1 < slides.length && direction === "right"){
-                    leftCardBack.style.background = `url("../img/predict/left-team-desc${current + 2}.png") no-repeat 0 0/contain`
-                    rightCardBack.style.background = `url("../img/predict/right-team-desc${current + 2}.png") no-repeat 0 0/contain`
+                    leftCardBack.style.background = `url("./img/predict/left-team-desc${current + 2}.png") no-repeat 0 0/contain`
+                    rightCardBack.style.background = `url("./img/predict/right-team-desc${current + 2}.png") no-repeat 0 0/contain`
 
                 }else if (current + 1 === slides.length && direction === "right"){
-                    leftCardBack.style.background = `url("../img/predict/left-team-desc1.png") no-repeat 0 0/contain`
-                    rightCardBack.style.background = `url("../img/predict/right-team-desc1.png") no-repeat 0 0/contain`
+                    leftCardBack.style.background = `url("./img/predict/left-team-desc1.png") no-repeat 0 0/contain`
+                    rightCardBack.style.background = `url("./img/predict/right-team-desc1.png") no-repeat 0 0/contain`
                 }
                 if(current - 1 > 1 && direction === "left"){
-                    leftCardBack.style.background = `url("../img/predict/left-team-desc${current }.png") no-repeat 0 0/contain`
-                    rightCardBack.style.background = `url("../img/predict/right-team-desc${current }.png") no-repeat 0 0/contain`
+                    leftCardBack.style.background = `url("./img/predict/left-team-desc${current }.png") no-repeat 0 0/contain`
+                    rightCardBack.style.background = `url("./img/predict/right-team-desc${current }.png") no-repeat 0 0/contain`
 
                 }else if (current - 1 === 0 && direction === "left"){
-                    leftCardBack.style.background = `url("../img/predict/left-team-desc${slides.length}.png") no-repeat 0 0/contain`
-                    rightCardBack.style.background = `url("../img/predict/right-team-desc${slides.length}.png") no-repeat 0 0/contain`
+                    leftCardBack.style.background = `url("./img/predict/left-team-desc${slides.length}.png") no-repeat 0 0/contain`
+                    rightCardBack.style.background = `url("./img/predict/right-team-desc${slides.length}.png") no-repeat 0 0/contain`
                 }
 
             })
@@ -529,8 +529,8 @@
                     const rightCardBack = rightCard.querySelector(".back-img")
                     leftCard.classList.add("left-anim");
                     rightCard.classList.add("right-anim");
-                    leftCardBack.style.background = `url("../img/predict/left-team-desc${current + 1}.png") no-repeat 0 0/contain`
-                    rightCardBack.style.background = `url("../img/predict/right-team-desc${current + 1}.png") no-repeat 0 0/contain`
+                    leftCardBack.style.background = `url("./img/predict/left-team-desc${current + 1}.png") no-repeat 0 0/contain`
+                    rightCardBack.style.background = `url("./img/predict/right-team-desc${current + 1}.png") no-repeat 0 0/contain`
                 })
                 setTimeout(() => {
                     SlideIconsInit(slidesIcons, current);
