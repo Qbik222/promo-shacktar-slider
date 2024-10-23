@@ -239,6 +239,15 @@
         &:nth-child(3)
           .guide__list-popup
             right: 10px
+  .predict
+    &__icons
+      &-item
+        padding: 9px 20px
+        font-size: 18px
+        line-height: 22px
+        border-radius: 5px
+    &__move
+      top: 22%
   .table
     &__head
       padding: 20px 30px
@@ -302,7 +311,7 @@
   .predict
     &__counter
       padding-top: 230px
-      position: relative
+      //position: relative
       gap: 40px
       margin-top: 0
     &__team1, &__team2
@@ -419,6 +428,13 @@
         width: 110px
         white-space: nowrap
         text-align: center
+    &__icons
+      gap: 5px
+      &-item
+        font-size: 14px
+        line-height: 22px
+        padding: 5px 16px
+
     &__bet
       margin-top: 20px
       &-true, &-false
@@ -486,6 +502,9 @@
       &-increase, &-decrease
         width: 40px
         height: 40px
+    &__icons
+      min-width: 400px
+      transform: scale(.9)
     &__score
       width: 280px
       height: 280px
@@ -522,6 +541,12 @@
     &__wrap
       transform: scale(.9)
       margin: -15px 0 -25px 0
+    &__icons
+      transform: scale(.8)
+      transform-origin: top
+      margin: 10px 0
+    &__move
+      top: 25%
   .table
     &__head
       &-item

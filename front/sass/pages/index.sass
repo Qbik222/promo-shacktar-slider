@@ -437,6 +437,64 @@ body.light, body.dark
     bottom: -2px
     background: linear-gradient(0deg, #00002C 40%, rgba(0, 0, 44, 0.00) 100%)
     height: 35%
+  &__icons
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    position: relative
+    z-index: 2
+    margin-top: 20px
+    &-item
+      font-family: $font-suisse-intl-med
+      font-size: 24px
+      line-height: 24px
+      color: $yellow
+      text-transform: uppercase
+      text-align: center
+      letter-spacing: .1em
+      padding: 15px 32px 13px 32px
+      background: linear-gradient(208deg, rgba(47, 52, 45, 0.10) 31.96%, rgba(16, 23, 18, 0.10) 90%)
+      backdrop-filter: blur(40px)
+      border-radius: 10px
+      border: 1px solid rgba($yellow, .4)
+      &._current
+        background: linear-gradient(188deg, rgba(65, 72, 62, 0.50) 35.97%, #DBB02C 214.86%)
+      &:hover
+        cursor: pointer
+
+  &__move
+    position: absolute
+    width: 90%
+    max-width: 1350px
+    display: flex
+    justify-content: space-between
+    z-index: 3
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    pointer-events: none
+    &-left, &-right
+      width: 66px
+      height: 106px
+      transition: transform .2s ease-in-out
+      user-select: none
+      pointer-events: initial
+      &:hover
+        transform: scale(1.05)
+        cursor: pointer
+    &-left
+      background: url("../img/predict/move-left.png") no-repeat 0 0/contain
+      @media screen and (max-width: 950px)
+        background: url("../img/predict/move-left-mob.png") no-repeat 0 0/contain
+        width: 48px
+        height: 48px
+    &-right
+      background: url("../img/predict/move-right.png") no-repeat 0 0/contain
+      @media screen and (max-width: 950px)
+        background: url("../img/predict/move-right-mob.png") no-repeat 0 0/contain
+        width: 48px
+        height: 48px
   &__title
     z-index: 1
   &__counter
@@ -444,17 +502,103 @@ body.light, body.dark
     display: flex
     align-items: center
     justify-content: center
+    position: absolute
+    opacity: 0
+    z-index: -1
+    //transition: all .2s ease-in-out
+    .left-anim
+      .front-img
+        transform: perspective(300px) rotateY(180deg)
+        transition: transform 1s ease-in-out
+      .back-img
+        transform: perspective(300px) rotateY(0deg)
+        transition: transform 1s ease-in-out
+    .right-anim
+      .front-img
+        transform: perspective(300px) rotateY(-180deg)
+        transition: transform 1s ease-in-out
+      .back-img
+        transform: perspective(300px) rotateY(-360deg)
+        transition: transform 1s ease-in-out
+    &:nth-child(1)
+      .predict__team1
+        .front-img
+          background: url("../img/predict/left-team-desc1.png") no-repeat 0 0/contain
+          //transform: perspective(400px) rotateY(80deg)
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/left-team-mob1.png") no-repeat 0 0/contain
+      .predict__team2
+        .front-img
+          background: url("../img/predict/right-team-desc1.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/right-team-mob1.png") no-repeat 0 0/contain
+    &:nth-child(2)
+      .predict__team1
+        .front-img
+          background: url("../img/predict/left-team-desc2.png") no-repeat 0 0/contain
+          //transform: perspective(400px) rotateY(80deg)
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/left-team-mob2.png") no-repeat 0 0/contain
+      .predict__team2
+        .front-img
+          background: url("../img/predict/right-team-desc2.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/right-team-mob2.png") no-repeat 0 0/contain
+    &:nth-child(3)
+      .predict__team1
+        .front-img
+          background: url("../img/predict/left-team-desc3.png") no-repeat 0 0/contain
+          //transform: perspective(400px) rotateY(80deg)
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/left-team-mob3.png") no-repeat 0 0/contain
+      .predict__team2
+        .front-img
+          background: url("../img/predict/right-team-desc3.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/right-team-mob3.png") no-repeat 0 0/contain
+    &:nth-child(4)
+      .predict__team1
+        .front-img
+          background: url("../img/predict/left-team-desc4.png") no-repeat 0 0/contain
+          //transform: perspective(400px) rotateY(80deg)
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/left-team-mob4.png") no-repeat 0 0/contain
+      .predict__team2
+        .front-img
+          background: url("../img/predict/right-team-desc4.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/right-team-mob4.png") no-repeat 0 0/contain
+    &:nth-child(5)
+      .predict__team1
+        .front-img
+          background: url("../img/predict/left-team-desc5.png") no-repeat 0 0/contain
+          //transform: perspective(400px) rotateY(80deg)
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/left-team-mob5.png") no-repeat 0 0/contain
+      .predict__team2
+        .front-img
+          background: url("../img/predict/right-team-desc5.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/predict/right-team-mob5.png") no-repeat 0 0/contain
+    &._active
+      position: relative
+      opacity: 1
+      z-index: 1
   &__team1, &__team2
+    position: relative
     width: 225px
     height: 350px
     display: flex
     align-items: center
     justify-content: space-between
+    transform: perspective(300px) rotateY(0deg)
     &-increase, &-decrease
-      width: 66px
-      height: 66px
-      transition: transform .1s ease-in-out
-      user-select: none
+        width: 66px
+        height: 66px
+        transition: transform .1s ease-in-out
+        user-select: none
+        z-index: 3
+        position: relative
     &-increase
       background: url("https://fav-prom.com/html/shakhtar-predictor/img/btn-plus.png") no-repeat 0 0/contain
       transform: translate(50%, 0)
@@ -471,15 +615,23 @@ body.light, body.dark
         transform: translate(-50%, 0) scale(1.1)
       &:active
         transform: translate(-50%, 0)
-
+    .front-img, .back-img
+      width: 100%
+      height: 100%
+      position: absolute
+      overflow: hidden
+      backface-visibility: hidden
   &__team1
-    background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/left-team-desc.png") no-repeat 0 0/contain
-    @media screen and (max-width: 1050px)
-      background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/left-team-mob.png") no-repeat 0 0/contain
+    .front-img
+      transform: perspective(300px) rotateY(0deg)
+    .back-img
+      transform: perspective(300px) rotateY(-180deg)
   &__team2
-    background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/right-team-desc.png") no-repeat 0 0/contain
-    @media screen and (max-width: 1050px)
-      background: url("https://fav-prom.com/html/shakhtar-predictor/img/predict/right-team-mob.png") no-repeat 0 0/contain
+    .front-img
+      transform: perspective(300px) rotateY(0deg)
+    .back-img
+      transform: perspective(300px) rotateY(-180deg)
+
   &__score
     width: 430px
     height: 430px
