@@ -499,6 +499,8 @@ body.light, body.dark
     z-index: 1
   &__lock
     display: none
+  &__done
+    display: none
   &__counter
     margin-top: 50px
     display: flex
@@ -584,13 +586,16 @@ body.light, body.dark
             background: url("../img/predict/right-team-mob5.png") no-repeat 0 0/contain
     &._lock
       .predict
+        &__team1, &__team2
+          &-increase, &-decrease
+            display: none
         &__lock
           display: flex
           align-items: center
           justify-content: center
           flex-direction: column
           position: relative
-          width: 400px
+          width: 430px
           height: 170px
           background: linear-gradient(90deg, rgba(0, 0, 44, 0.00) 0%, #00002C 49.3%, rgba(0, 0, 44, 0.00) 100%)
           &::before
@@ -624,6 +629,40 @@ body.light, body.dark
 
         &__score
           display: none
+    &._done
+      .predict
+        &__team1, &__team2
+          &-increase, &-decrease
+            display: none
+        &__lock, &__score
+          display: none
+        &__done
+          display: flex
+          align-items: center
+          justify-content: center
+          padding-bottom: 10px
+          height: 120px
+          width: 430px
+          background: linear-gradient(90deg, rgba(0, 0, 44, 0.00) 0%, #00002C 49.3%, rgba(0, 0, 44, 0.00) 100%)
+          &::before
+            content: ''
+            display: block
+            width: 62px
+            height: 84px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background: url("../img/predict/done.png") no-repeat 0 0/contain
+          &-text
+            color: $white
+            font-family: $font-suisse-intl-med
+            font-size: 32px
+            letter-spacing: .08em
+            text-shadow: 9px 5px 8px rgba(0, 0, 0, 0.48)
+            text-transform: uppercase
+            z-index: 2
+
     &._active
       position: relative
       opacity: 1

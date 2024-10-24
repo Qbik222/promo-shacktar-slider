@@ -253,6 +253,13 @@
               font-size: 14px
             &-data
               font-size: 28px
+      &._done
+        .predict
+          &__done
+            width: 350px
+            height: 100px
+            &-text
+              font-size: 24px
 
     &__icons
       &-item
@@ -329,8 +336,18 @@
       gap: 40px
       margin-top: 0
       &._lock
+        padding-top: 200px
+        margin-bottom: -60px
         .predict
           &__lock
+            position: absolute
+            top: 40px
+            z-index: 0
+      &._done
+        padding-top: 150px
+        margin-bottom: -60px
+        .predict
+          &__done
             position: absolute
             top: 40px
             z-index: 0
