@@ -98,6 +98,12 @@
       width: 300px
       height: 460px
 
+@media screen and (max-width: 1220px)
+  .predict
+    &__slider
+      transform: scale(.87)
+
+
 @media screen and (max-width: 1150px)
   .table
     &__wrap
@@ -240,11 +246,13 @@
           .guide__list-popup
             right: 10px
   .predict
+    &__slider
+      transform: scale(1)
     &__counter
       &._lock
         .predict
           &__lock
-            width: 390px
+            width: 320px
             height: 144px
             &::before
               width: 20px
@@ -256,7 +264,7 @@
       &._done
         .predict
           &__done
-            width: 350px
+            width: 320px
             height: 100px
             &-text
               font-size: 24px
@@ -273,7 +281,8 @@
     &__head
       padding: 20px 30px
       &-item
-        font-size: 16px
+        font-size: 13px
+        white-space: nowrap
     &__body
       padding: 15px 30px
     &__wrap
@@ -330,22 +339,24 @@
     &__list
       transform: scale(.8)
   .predict
+    &__move
+      top: 21%
     &__counter
-      padding-top: 230px
+      padding-top: 300px
       //position: relative
       gap: 40px
       margin-top: 0
       &._lock
-        padding-top: 200px
-        margin-bottom: -60px
+        //padding-top: 200px
+        //margin-bottom: -60px
         .predict
           &__lock
             position: absolute
             top: 40px
             z-index: 0
       &._done
-        padding-top: 150px
-        margin-bottom: -60px
+        //padding-top: 150px
+        //margin-bottom: -60px
         .predict
           &__done
             position: absolute
@@ -358,7 +369,7 @@
       top: 0
       z-index: 0
     &__btn
-      margin-top: 100px
+      margin-top: 150px
 
 @media screen and (max-width: 600px)
   .title
@@ -498,6 +509,14 @@
       padding: 20px
       &-item
         font-size: 11px
+        &:nth-child(1)
+          width: 105px
+        &:nth-child(2)
+          width: 100px
+        &:nth-child(3)
+          width: 90px
+        &:nth-child(4)
+          width: 65px
     &__row
       &-item
         font-size: 13px
@@ -525,7 +544,7 @@
     height: 750px
   .predict
     &__counter
-      padding-top: 200px
+      padding-top: 290px
 
 @media screen and (max-width: 420px) and (max-height: 740px)
   .promo
@@ -533,6 +552,10 @@
 
 @media screen and (max-width: 395px)
   .predict
+    &__counter
+      padding-top: 180px
+    &__move
+      top: 23.5%
     &__team1, &__team2
       width: 140px
       height: 220px
@@ -548,6 +571,8 @@
     &__last
       &-score
         margin-top: 5px
+    &__btn
+      margin-top: 60px
 @media screen and (max-width: 390px) and (max-height: 700px)
   .promo
     height: 660px
@@ -582,8 +607,8 @@
       transform: scale(.8)
       transform-origin: top
       margin: 10px 0
-    &__move
-      top: 23%
+    //&__move
+    //  top: 24%
   .table
     &__head
       &-item

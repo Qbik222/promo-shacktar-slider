@@ -433,6 +433,8 @@ body.light, body.dark
   &::after
     background: linear-gradient(180deg, #00002C 0%, rgba(0, 0, 44, 0.00) 100%)
     top: 0
+  &__slider
+    height: 430px
   &::before
     bottom: -2px
     background: linear-gradient(0deg, #00002C 40%, rgba(0, 0, 44, 0.00) 100%)
@@ -502,13 +504,14 @@ body.light, body.dark
   &__done
     display: none
   &__counter
-    margin-top: 50px
+    margin-top: 20px
     display: flex
     align-items: center
     justify-content: center
     position: absolute
     opacity: 0
     z-index: -1
+    height: 430px
     //transition: all .2s ease-in-out
     .left-anim
       .front-img
@@ -928,6 +931,7 @@ body.light, body.dark
       letter-spacing: .04em
       font-family: $font-suisse-intl-med
       text-transform: uppercase
+      white-space: nowrap
   &__row
     border-bottom: 1px solid rgba($white, .12)
     &-item
