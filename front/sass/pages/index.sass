@@ -497,6 +497,8 @@ body.light, body.dark
         height: 48px
   &__title
     z-index: 1
+  &__lock
+    display: none
   &__counter
     margin-top: 50px
     display: flex
@@ -580,6 +582,48 @@ body.light, body.dark
           background: url("../img/predict/right-team-desc5.png") no-repeat 0 0/contain
           @media screen and (max-width: 1050px)
             background: url("../img/predict/right-team-mob5.png") no-repeat 0 0/contain
+    &._lock
+      .predict
+        &__lock
+          display: flex
+          align-items: center
+          justify-content: center
+          flex-direction: column
+          position: relative
+          width: 400px
+          height: 170px
+          background: linear-gradient(90deg, rgba(0, 0, 44, 0.00) 0%, #00002C 49.3%, rgba(0, 0, 44, 0.00) 100%)
+          &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 28px
+            height: 35px
+            background: url("../img/predict/lock.svg") no-repeat 0 0/contain
+            filter: drop-shadow(9px 5px 8px rgba(0, 0, 0, 0.48))
+
+          &-title
+            color: $yellow
+            text-transform: uppercase
+            font-family: $font-suisse-intl-semib
+            font-size: 18px
+            letter-spacing: .08em
+            text-align: center
+            max-width: 270px
+            text-shadow: 9px 5px 8px rgba(0, 0, 0, 0.48)
+          &-data
+            margin-top: 10px
+            color: $white
+            font-size: 38px
+            letter-spacing: .08em
+            font-family: $font-suisse-intl-med
+            text-shadow: 9px 5px 8px rgba(0, 0, 0, 0.48)
+
+        &__score
+          display: none
     &._active
       position: relative
       opacity: 1

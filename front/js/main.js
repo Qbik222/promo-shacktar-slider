@@ -188,16 +188,16 @@
         return `${day}.${month}.${year} / ${hours}:${minutes}`;
     }
 
-    function maskUserId(userId) {
-        return "**" + userId.toString().slice(2);
-    }
-
-    let checkUserAuth = () => {
-        if (userId) {
-            unauthMsgs.forEach(item => item.classList.add('hide'));
-            youAreInBtns.forEach(item => item.classList.remove('hide'));
-        }
-    }
+    // function maskUserId(userId) {
+    //     return "**" + userId.toString().slice(2);
+    // }
+    //
+    // let checkUserAuth = () => {
+    //     if (userId) {
+    //         unauthMsgs.forEach(item => item.classList.add('hide'));
+    //         youAreInBtns.forEach(item => item.classList.remove('hide'));
+    //     }
+    // }
 
     const scorePrediction = [
         {team1 : 0, team2: 0},
